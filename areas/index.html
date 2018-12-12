@@ -17,7 +17,7 @@
             grid-template: 100px 1fr 150px / 200px 1fr;
             grid-gap: 10px;
             overflow: auto;
-            height: 100vh;
+            height: 100vh; /*utilizar todo el ancho*/
             grid-template-areas: "header header"
                                  "left contenido"
                                  "footer footer";
@@ -37,13 +37,16 @@
         }
         .header{
             grid-area: header;
+            background: purple;
         }
         .left{
             grid-area: left;
+            background: lightgreen;
             
         }
         .contenido{
             grid-area: contenido;
+            background: fuchsia;
         }
         .footer{
             grid-area: footer;
