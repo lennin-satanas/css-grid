@@ -1,12 +1,89 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name= viewport content="width=device-width, initial-scale=1"/>
     <title>Pinteres</title>
+    <style>
+
+        .container{
+            display: grid;
+            /* con esto no necesito @media Query para las columnas*/
+            grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+            grid-gap: 5px;
+            justify-content: center;
+        }
+        .item{
+            border-radius: 40px;
+            padding: 10px;
+            background: #f2f2f2;
+        }
+        .item img{
+        /* max-width: 100%; */
+         /* se resuelve el problema de un borde gris  */
+         width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        }
+        .level-1{
+            grid-row-end: span 3;
+        }
+        .level-2{
+            grid-row-end: span 2;
+        }
+        .level-3{
+            grid-row-end: span 1;
+        } 
+
+        
     
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item level-1">
+            <img src="landing.jpg" alt="">
+        </div>
+        <div class="item level-2">
+            <img src="tshirt.jpg" alt="">
+        </div>
+        <div class="item level-3">
+            <img src="house.jpg" alt="">
+        </div>
+        <div class="item level-1">
+            <img src="landing.jpg" alt="">
+        </div>
+        
+        <div class="item level-3">
+            <img src="house.jpg" alt="">
+        </div>
+        <div class="item level-1">
+            <img src="landing.jpg" alt="">
+        </div>
+        <div class="item level-2">
+            <img src="tshirt.jpg" alt="">
+        </div>
+        
+        <div class="item level-1">
+            <img src="landing.jpg" alt="">
+        </div>
+        <div class="item level-2">
+            <img src="tshirt.jpg" alt="">
+        </div>
+        <div class="item level-3">
+            <img src="house.jpg" alt="">
+        </div>
+        <div class="item level-1">
+            <img src="landing.jpg" alt="">
+        </div>
+        <div class="item level-2">
+            <img src="tshirt.jpg" alt="">
+        </div>
+        <div class="item level-3">
+            <img src="house.jpg" alt="">
+        </div>
+    </div>
 </body>
 </html>

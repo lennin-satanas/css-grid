@@ -1,0 +1,85 @@
+body{
+    font-family: sans-serif;
+    margin: 0px;
+}
+.container{
+/* color: red; */
+
+    display: grid;
+    grid-template: 80px 1fr 300px/150px 1fr;
+    grid-gap: 3px;
+    grid-template-areas: "header header header"
+                         "sec-menu sec-film sec-film";
+    height: 100vh;
+    width: 100vw;
+    
+    
+
+}
+
+/*parte superior*/
+.hero{
+    /* height: 100px;
+    width: 100vw; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-content: center; */
+    border: 1px solid yellow;
+    grid-area: header;
+}
+
+.img-user{
+    width: 60px;
+    height: 60px;
+    background: #ECECEC;
+    border-radius: 30px;
+}
+
+.img-user img{
+    width: 60px;
+    height: 60px; 
+}
+
+/*Menu izquierdo normal*/
+.menu{
+  border: 1px solid darkblue;
+  grid-area: sec-menu;
+    
+}
+.menu ol{
+    
+}
+.menu li{
+    list-style-type: none;
+}
+.menu a{
+    text-decoration: none;
+    color: green;
+    display: flex;
+    
+
+}
+
+/*seccion principal peliculas*/
+
+.films{
+    border: 1px solid salmon;
+    grid-area: sec-film;
+}
+.film-int{
+    border: 1px solid teal;
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    
+}
+.img-films{
+
+}
+.img-films img{
+    width: 300px;
+    height: 150px;
+}
+.descrition{
+    background: rgba(242, 56, 56, .7);
+}

@@ -3,24 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instagram</title>
     <style>
         body{
             margin: 0;
             font-family: Arial;
+            background: gray;
         }
         
         .post-list{
         	display: grid;
         	grid-template-columns: repeat(3, minmax(100px, 293px));
         	justify-content: center; /*centrar la grilla*/
-        	grid-gap: 28px;
+            grid-gap: 28px;
+            
         }
         .post{
             cursor: pointer; /*manito*/
             position: relative;
             /*width: 200px;*/
             display: block;
+            
+       
 
         }
         .post-image{
@@ -58,12 +63,15 @@
             text-align: center;
             display: inline-block;
         }
-        @media screen and (max-width: 768px) {
-            .post-list{
-                grid-gap: 3px;
-            }
-    	}
 
+        @media screen and (max-width: 768px) {
+            .post-list {
+            grid-gap: 3px;
+            grid-template-columns: repeat(2, minmax(100px, 293px));
+
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -170,3 +178,4 @@
    </section>
 </body>
 </html>
+
