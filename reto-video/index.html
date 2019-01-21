@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <title>Peliculas</title>
@@ -10,45 +10,187 @@
 <body>
     <div class="container">
 
-        <div class="hero header">
-            <figure class="logo">
-                <img src="img/movi.jpg" alt="">
-            </figure>
-            <input type="text" placeholder="Buscar">
-            <span>Lennin Ibarra</span>
-            <figure class="img-user">
-                <img src="img/login_user.png" alt="">
-            </figure>
-        </div>
-        <div class="menu sec-menu">
-            <ol>
-                <li>
-                    <a class="link" href="#home">incio</a>
-                </li>
-                <li>
-                    <a href="#trending" class="link">Tendencias</a>
-                </li>
-                <li>
-                    <a href="#likes" class="link">Me gusta</a>
-                </li>
-                <li>
-                    <a href="#settings" class="link">Ajustes</a>
-                </li>
-            </ol>
-        </div>
-        <div class="films sec-film">
-            <div class="film-int">
-                <figure class="img-films">
-                    <img src="img/Chucky.png" alt="">  
+        <header class="hero header">
+            <div class="item-hero">
+                <figure class="logo">
+                    <img src="img/movi.jpg" alt="">
                 </figure>
-                <div class="descrition">
-                    <h1>Chucky</h1>
-                    <h3>La mejor pelicula del mundo, Chucky</h3>
-                </div>
             </div>
+            <div class="item-hero">
+                <input type="text" placeholder="Buscar: Peliculas, series, documentales">
+            </div>
+            <div class="item-hero">
+                <span>Lennin Ibarra</span>
+            </div>
+            <div class="item-hero">
+                <figure class="img-user">
+                     <img src="img/login_user.png" alt="">
+                </figure>
+            </div>  
+        </header>
+        <section class="menu sec-menu">
+            <div class="item-menu">
+                <a href="#inicio">
+                    <i class="icon icon-home">
+                        <p>Inicio</p>
+                    </i>
+                </a> 
+            </div>
+            <div class="item-menu">
+                    <a href="#inicio">
+                        <i class="icon icon-fire">
+                            <p>Tendencias</p>
+                        </i>
+                    </a> 
+            </div>
+
+            <div class="item-menu">
+                    <a href="#inicio">
+                        <i class="icon icon-heart">
+                            <p>Me gusta</p>
+                        </i>
+                    </a> 
+            </div>
+
+            <div class="item-menu">
+                    <a href="#inicio">
+                        <i class="icon icon-heart">
+                            <p>Ajustes</p>
+                        </i>
+                    </a> 
+            </div>
+   
             
+
+        </section>
+        <!-- seccion para las peliculas -->
+        <section class="films sec-film">
+            <!-- /*seccion interna*/ -->
+                
+                 <div class="item-films">
+                    
+
+                      
+                                <img src="img/Chucky.png" alt="">  
+                       
+
+                    
+                     <!-- <article class="article-films">
+                         <figure class="img-films">
+                            <img src="img/Chucky.png" alt="">  
+                        </figure>
+                        <div class="mensaje">
+                            <h1>Chucky</h1>
+                            <h3>Chucky es un personaje ficticio de la saga de películas de terror Child's Play</h3>
+                        </div> 
+                    </article>   -->
+                </div>
+
+                <div class="item-films">
+                        <img src="img/exorcista.jpg" alt="">  
+                    <!-- <article class="article-films">
+                        <figure class="img-films">
+                            
+                        </figure>
+                        <div class="mensaje">
+                            <h1>El exorcista</h1>
+                            <h3>El exorcista sigue siendo la película más célebre de la historia del cine de terror</h3>
+                        </div> 
+                    </article> -->
+                </div>
+
+                <div class="item-films">
+                        <img src="img/it.jpg" alt="">   
+                    <!-- <article class="article-films">
+                        <figure class="img-films">
+                            
+                        </figure> 
+                         <div class="mensaje">
+                            <h1>It</h1>
+                            <h3>It (titulada: It (Eso) en Hispanoamérica) es una película de 2017</h3>
+                        </div>  
+                    </article> -->
+                </div>
+
+                <div class="item-films">
+                        <img src="img/critters.jpg" alt=""> 
+                    <!-- <article class="article-films">
+                        <figure class="img-films">
+                             
+                        </figure>
+                        <div class="mensaje">
+                            <h1>Critters</h1>
+                            <h3>Critters es una película de terror con toques de comedia</h3>
+                        </div>
+                    </article> -->
+                </div>
+
+                <div class="item-films">
+                        <img src="img/Chucky.png" alt="">
+                    <!-- <article class="article-films">
+                        <figure class="img-films">
+                              
+                        </figure>
+                        <div class="mensaje">
+                            <h1>Chucky</h1>
+                            <h3>La mejor pelicula del mundo, Chucky</h3>
+                        </div>
+                    </article> -->
+                </div>
+
+                <div class="item-films">
+                        <img src="img/Chucky.png" alt="">
+                    <!-- <article class="article-films">
+                        <figure class="img-films">
+                              
+                        </figure>
+                        <div class="mensaje">
+                            <h1>Chucky</h1>
+                            <h3>La mejor pelicula del mundo, Chucky</h3>
+                        </div>
+                    </article> -->
+                </div>
+                <div class="item-films">
+                        <img src="img/Chucky.png" alt=""> 
+                        <!-- <article class="article-films">
+                            <figure class="img-films">
+                                 
+                            </figure>
+                            <div class="mensaje">
+                                <h1>Chucky</h1>
+                                <h3>La mejor pelicula del mundo, Chucky</h3>
+                            </div>
+                        </article> -->
+                    </div>
+    
+                    <div class="item-films">
+                            <img src="img/Chucky.png" alt=""> 
+                        <!-- <article class="article-films">
+                            <figure class="img-films">
+                                 
+                            </figure>
+                            <div class="mensaje">
+                                <h1>Chucky</h1>
+                                <h3>La mejor pelicula del mundo, Chucky</h3>
+                            </div>
+                        </article> -->
+                    </div>
+    
+                    <div class="item-films">
+                            <img src="img/Chucky.png" alt="">
+                        <!-- <article class="article-films">
+                            <figure class="img-films">
+                                 
+                            </figure>
+                            <div class="mensaje">
+                                <h1>Chucky</h1>
+                                <h3>La mejor pelicula del mundo, Chucky</h3>
+                            </div>
+                        </article> -->
+                    </div>
+
             
-        </div>
+        </section>
 
     </div>
 </body>

@@ -1,38 +1,96 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?kfvqwz');
+    src:  url('../fonts/icomoon.eot?kfvqwz#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?kfvqwz') format('truetype'),
+      url('../fonts/icomoon.woff?kfvqwz') format('woff'),
+      url('../fonts/icomoon.svg?kfvqwz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-fire:before {
+    content: "\e904";
+  }
+  .icon-heart:before {
+    content: "\e905";
+  }
+  .icon-home:before {
+    content: "\e906";
+  }
+  .icon-github:before {
+    content: "\e900";
+  }
+  .icon-twitter:before {
+    content: "\e901";
+  }
+  .icon-instagram:before {
+    content: "\e902";
+  }
+  .icon-facebook:before {
+    content: "\e903";
+  }
+  
 body{
     font-family: sans-serif;
     margin: 0px;
+   
 }
 .container{
-/* color: red; */
-
     display: grid;
-    grid-template: 80px 1fr 300px/150px 1fr;
+    grid-template: 80px 1fr 300px/110px 1fr;
     grid-gap: 3px;
     grid-template-areas: "header header header"
                          "sec-menu sec-film sec-film";
+    margin: 0px;
     height: 100vh;
     width: 100vw;
-    
-    
-
 }
 
 /*parte superior*/
 .hero{
-    /* height: 100px;
-    width: 100vw; */
-    display: flex;
-    /* justify-content: center; */
-    /* align-content: center; */
-    border: 1px solid yellow;
     grid-area: header;
+    display: grid;
+    /* grid-template-columns: 20% 60% 10% 10%; */
+    grid-template-columns: auto 1fr auto auto;
+    /* background: red; */
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    
+}
+
+.hero input{
+   border: 1px solid rgb(102, 74, 74);
+   width: 300px;
+   /* padding: 10px; */
+   box-sizing: border-box;
+   /* text-align: center; */
+   padding: 5px;
+   border-radius: 5px;
+  
 }
 
 .img-user{
     width: 60px;
     height: 60px;
     background: #ECECEC;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .img-user img{
@@ -40,46 +98,190 @@ body{
     height: 60px; 
 }
 
+
+
+
+
 /*Menu izquierdo normal*/
 .menu{
-  border: 1px solid darkblue;
   grid-area: sec-menu;
-    
+  
+  background:#f85f62;
+   display: grid;
+  grid-template-rows: repeat(3, 130px) 1fr;
+  /* justify-content: center; /*aliena horizontal mente* */
+  align-items: flex-end; /*envia abajo a ajustes alinea verticalmente*/ 
+  height: 100%; 
+  padding: 5%;
 }
-.menu ol{
-    
-}
-.menu li{
-    list-style-type: none;
-}
-.menu a{
-    text-decoration: none;
-    color: green;
-    display: flex;
-    
 
+ .item-menu{
+   text-align: center; 
+} 
+
+.icon{
+  color: white;
+  font-size: 15px;
+  transition: font-size 1s ease;
 }
+
+.icon:hover{
+  font-size: 17px;
+}
+
+.item-menu a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*seccion principal peliculas*/
 
 .films{
+   
     border: 1px solid salmon;
     grid-area: sec-film;
-}
-.film-int{
-    border: 1px solid teal;
-    width: 400px;
-    height: 300px;
-    margin: 0;
+   display: grid;
+   /* indicar el # de columnas y filas  */
+   grid-template-columns: repeat(3,minmax(300px,1fr));
+   grid-template-rows: repeat(3, minmax(200px, 1fr));
+   grid-gap: 10px; 
+   height: 100vh;
+   /* width: 92vw;  */
+   /* justify-content: center; */
+  
+
     
 }
-.img-films{
+.item-films{
+  margin: 5px;
+  /* object-fit: cover; */
+  /* flex-shrink: 0; */
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgb(236, 236, 236)  ;
+  /*ajustarte a ti mismo*/
+  /* justify-self: center;
+  align-self: center; */
+}
 
+/* .article-films{ */
+  /* display: flex;
+  align-items: flex-end; */
+  /* margin: 0; */
+  /* width: 200px; */
+  /* height: 200px; */
+  /* border: 1px solid red;
+  background: red; */
+  /* position: absolute; 
+}*/
+
+
+.item img {
+  margin: 0px;
+  width: 100%;
+  /* height: 100%; */
+  
+  /* object-fit: cover; */
+  vertical-align: top;
+  position: relative;
+  
+} 
+
+
+/* .mensaje{ */
+  /* width: 520px;
+  height: 120px; */
+  /* background: rgba(200, 240, 228, 0.527);
+  z-index: 1;
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 5px;
+  transition: height 1s ease;
+  box-sizing: border-box;
+     
+} */
+/* .mensaje:hover{
+  color: red;
+  height: 200px;
+} */
+
+@media screen and (max-width: 767px){
+  .films{
+   
+   border: 1px solid yellow;
+    /* grid-area: sec-film;
+   display: grid;
+   /* indicar el # de columnas y filas  */
+   grid-template-columns: repeat(2,minmax(180px,1fr));
+   grid-template-rows: repeat(6, minmax(180px,1fr));
+   grid-gap: 10px; 
+   height: 100vh; 
+   /* width: 92vw;  */
+   /* justify-content: center; */
+    
 }
-.img-films img{
-    width: 300px;
-    height: 150px;
+.hero{
+    grid-area: header;
+    /*display: grid;*/
+    /* grid-template-columns: 20% 60% 10% 10%; */
+    /*grid-template-columns: auto 1fr auto auto;*/
+    /* background: red; */
+   
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    
 }
-.descrition{
-    background: rgba(242, 56, 56, .7);
+
+.container{
+    display: grid;
+    grid-template: 200px 1fr 300px/110px 1fr;
+    grid-gap: 3px;
+    grid-template-areas: "header header header"
+                         "sec-menu sec-film sec-film";
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
 }
+
+@media screen and (max-width: 424px){
+  .films{
+   
+   border: 1px solid green;
+    /* grid-area: sec-film;
+   display: grid;
+   /* indicar el # de columnas y filas  */
+   grid-template-columns: repeat(1,minmax(450px,1fr));
+   grid-template-rows: repeat(9, minmax(300px,1fr));
+   grid-gap: 10px; 
+   height: 100vh; 
+   /* width: 92vw;  */
+   /* justify-content: center; */
+    
+}
+
