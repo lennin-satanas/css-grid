@@ -1,41 +1,87 @@
 body{
     font-family: sans-serif;
-    margin: 0px;
+    margin: 0;
 }
 
 .container{
     display: grid;
-    grid-template: 400px 190px 220px/ 400px 1fr;
+    grid-template:  minmax(400px, 1fr) minmax(80px, 190px) minmax(150px, 220px)/ minmax(200px, 400px) minmax(400px, 1fr);
     grid-template-areas: "menu-principal play-videos"
                          "menu-principal navigation-button"
                          "menu-principal interaction-section";
     position: absolute;
     width: 100vw;
+    height: 100vh;
     border: 1px solid red;
     grid-gap: 10px;
+    margin: 0;
+    overflow: auto;
 }
 
 .menu{
     grid-area: menu-principal;
-    background-color: aqua;
+    background-color: #0B3861;
+    padding: 30px 10px 15px 10px;
   
+}
+
+.menu p{
+    color: white;
+    font-size: 1.2em;
+}
+
+.menu-title:nth-of-type(odd){
+    color: white;
+    font-size: 2em;
+    
+}
+
+.menu-title:nth-of-type(even){
+    color: #B4045F;
+    font-size: 2em;
+}
+
+.list-song{
+    color: white;
+    
+}
+
+.list-fiends ul{
+    list-style: none;
+    color: white;
 }
 
 /*section video*/
 .video{
     grid-area: play-videos;
     background-color: pink;
-    /*
-    position: relative;
-    padding-bottom: 56.25%; 
-    padding-top: 30px; 
-    height: 0;
-    overflow: hidden;
-    */
+    display: grid;
+    grid-template: 80% 12% 8%/ 1fr;
+    grid-template-areas: "sec-video"
+                         "sec-title-song"
+                         "sec-count-view";
+    
 }
 
-/*
-.container-video iframe,
+
+
+.container-video{
+    grid-area: sec-video;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 0; 
+    height: 0;
+    overflow: hidden; */
+    
+}
+
+
+/* .container-video iframe,
 .container-video object,
 .container-video embed{
     position: absolute;
@@ -43,10 +89,11 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-}*/
+} */
 
 .title-song{
-    
+    grid-area: sec-title-song;
+    background: blue;
     color: gray;
     font-size: 1.2em;
     padding-bottom: 0px;
@@ -56,8 +103,9 @@ body{
 }
 
 .count-view{
-    
-    color: blue;
+    grid-area: sec-count-view;
+    background: gold;
+    color: red;
     font-size: .8em;
     padding-bottom: 0px;
     padding-top: 0px;
