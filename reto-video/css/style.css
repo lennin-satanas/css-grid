@@ -25,26 +25,23 @@
   }
   
   .icon-fire:before {
-    content: "\e904";
+    content: "\e9a9";
   }
   .icon-heart:before {
-    content: "\e905";
+    content: "\e9da";
   }
   .icon-home:before {
-    content: "\e906";
-  }
-  .icon-github:before {
-    content: "\e900";
-  }
-  .icon-twitter:before {
-    content: "\e901";
-  }
-  .icon-instagram:before {
     content: "\e902";
   }
-  .icon-facebook:before {
-    content: "\e903";
+  .icon-menu{
+    content: "\e9bd";
   }
+  .icon-cog:before{
+    content: "\e994";
+  }
+
+  
+  
   
 body{
     font-family: sans-serif;
@@ -53,7 +50,7 @@ body{
 }
 .container{
     display: grid;
-    grid-template: 80px 1fr 300px/110px 1fr;
+    grid-template: 80px 1fr 500px/110px 1fr;
     grid-gap: 3px;
     grid-template-areas: "header header header"
                          "sec-menu sec-film sec-film";
@@ -238,9 +235,9 @@ body{
   background: rgba(200, 240, 228, 0.527);
   position: absolute;
   bottom: 0;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   color: white;
-  padding: 1px 10px 20px 10px;
+  /* padding: 1px 10px 20px 10px; */
 
   animation-name: blockMsnOut;
   animation-duration: 1s;
@@ -248,8 +245,6 @@ body{
   /* animation-play-state: paused; */
   
 } 
-
-
 
 .article-films:hover{
   
@@ -351,7 +346,7 @@ body{
 
 
 /*Tercer cambio de responsibe*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 767px){
   .container{
     display: grid;
     grid-template: 200px 1fr 300px/110px 1fr;
