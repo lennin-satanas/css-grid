@@ -1,11 +1,49 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?onmpou');
+    src:  url('../fonts/icomoon.eot?onmpou#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?onmpou') format('truetype'),
+      url('../fonts/icomoon.woff?onmpou') format('woff'),
+      url('../fonts/icomoon.svg?onmpou#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+ 
+  .icon-share:before {
+    content: "\e900";
+  }
+  .icon-cloud-download:before {
+    content: "\e9c2";
+  }
+  .icon-arrow-left2:before {
+    content: "\ea40";
+  }
+
 body{
     font-family: sans-serif;
     margin: 0;
+    overflow: hidden;
 }
 
 .container{
     display: grid;
-    grid-template:  minmax(400px, 1fr) minmax(80px, 190px) minmax(150px, 220px)/ minmax(200px, 400px) minmax(400px, 1fr);
+    grid-template:  minmax(400px, 1fr) minmax(40px, 60px) minmax(150px, 1fr)/ minmax(200px, 400px) minmax(400px, 1fr);
     grid-template-areas: "menu-principal play-videos"
                          "menu-principal navigation-button"
                          "menu-principal interaction-section";
@@ -13,7 +51,7 @@ body{
     width: 100vw;
     height: 100vh;
     border: 1px solid red;
-    grid-gap: 10px;
+    grid-gap: 3px;
     margin: 0;
     overflow: auto;
 }
@@ -46,17 +84,27 @@ body{
     
 }
 
+.list-song ol{
+    padding-inline-start:  20px !important;
+}
+
 .list-fiends ul{
     list-style: none;
     color: white;
+    padding: 0px;
 }
+
+.list-fiends span{
+  padding-left: 15px;
+}
+
 
 /*section video*/
 .video{
     grid-area: play-videos;
-    background-color: pink;
+    /* background-color: pink; */
     display: grid;
-    grid-template: 80% 12% 8%/ 1fr;
+    grid-template: 88% 8% 4%/ 1fr;
     grid-template-areas: "sec-video"
                          "sec-title-song"
                          "sec-count-view";
@@ -67,7 +115,7 @@ body{
 
 .container-video{
     grid-area: sec-video;
-    background: yellow;
+    /* background: yellow; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,26 +140,28 @@ body{
 } */
 
 .title-song{
+    display: flex;
+    align-items: flex-end;
     grid-area: sec-title-song;
-    background: blue;
+    /* background: blue; */
     color: gray;
     font-size: 1.2em;
     padding-bottom: 0px;
     padding-top: 0px;
     margin: 0px;
     padding-left: 10px;
+    margin: 0;
 }
 
 .count-view{
     grid-area: sec-count-view;
-    background: gold;
-    color: red;
+    /* background: gold; */
+    color: #A4A4A4;
     font-size: .8em;
     padding-bottom: 0px;
     padding-top: 0px;
     margin: 0px;
     padding-left: 10px;
-
 }
 
 
@@ -119,14 +169,172 @@ body{
 /*section navigation*/
 .navigation{
     grid-area: navigation-button;
-    background: red;
+    /* background: red; */
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template: 1fr/minmax(100px, 300px) minmax(100px, 300px) minmax(100px, 500px);
+    grid-template-areas: "sec-addlist sec-media-buttons sec-labels";
+    grid-gap: 3px;
+    border-bottom: 1px solid gray;
 }
 
+.addlist{
+    grid-area: sec-addlist;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #B4045F; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.addlist button{
+    position: relative;
+    background-color: #4caf50;
+    width: 150px;
+    height: 80%;
+    border: none;
+    font-size: 1em;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+   
+
+}
+
+.addlist button:after{
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+
+}
+
+.addlist button:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.media-buttons{
+    grid-area: sec-media-buttons;
+    /* background: #0B3861; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #848484;
+    font-size: 1em;
+    border: none;
+    background: none;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*quitando el borde cuando se pulsa el boton*/
+.icon:focus{
+    outline: none;
+}
+
+.labels{
+    grid-area: sec-labels;
+    /* background: tan; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn-labels{
+    /* border: 1px solid red; */
+    height: 50%;
+    margin: 5px;
+    padding: 10px;
+    font-size: .7em;
+    border-radius: 50%;
+    background: #F6CEF5;
+    text-align: center;
+}
+
+.btn-labels:nth-child(2n+0){
+    background: #F5D0A9;
+}
+.btn-labels:nth-child(3n+0){
+    background: #A9BCF5;
+}
+
+
+
+/*seccion interacción*/
 .interaction{
+    width: 100%;
+    height: 100%;
     grid-area: interaction-section;
     background: yellow;
-    width: 100%;
-    height: 100%;  
+    display: grid;
+    grid-template: 1fr/ 65% 35%;
+    grid-template-areas: "sec-comments sec-suggestions";
+    border: 1px solid red;
+    padding-left: 30px;
+    
+
+    
 }
+
+.comments{
+    grid-area: sec-comments;
+    color: gray;
+    padding: 10px;
+    
+}
+
+.frm-comments input{
+    width: 70%;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.intro-comment{
+     padding-top: 30px;
+}
+
+
+
+
+.suggestions{
+    grid-area: sec-suggestions;
+    color: gray;
+    padding: 10px;
+}
+
+
+
